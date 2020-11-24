@@ -1,0 +1,48 @@
+.linear-grad-to-bottom{
+    -fx-background-color: linear-gradient(to bottom,#0f5873 , #21a4d4);
+    
+}
+
+.linear-grad-to-top{
+    -fx-background-color: linear-gradient(to bottom,#21a4d4,#0f5873);
+   
+}
+
+#menu_button:hover{     
+  -fx-fill:#f10f0f;
+}
+#next:hover{     
+  -fx-fill:#ffffff;
+}
+
+#play:hover{     
+  -fx-fill:#ffffff;
+}
+
+#prev:hover{     
+  -fx-fill:#ffffff;
+}
+
+#close:hover{     
+  -fx-fill:#f10f0f;
+}
+
+#shuffle:hover{
+    -fx-fill:#f10f0f;
+}
+
+#repeat:hover{
+    -fx-fill:#f10f0f;
+}
+
+#minimize:hover{
+    -fx-fill:#f10f0f;
+}
+
+#add:hover{
+    -fx-fill:#f10f0f;
+}
+
+#close2:hover{
+    -fx-fill:#f10f0f;
+}

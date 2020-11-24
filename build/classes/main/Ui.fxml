@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import de.jensd.fx.glyphs.testapps.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="783.0" style="-fx-background-color: #00000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.UiController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="320.0" style="-fx-background-color: #0f5873; -fx-background-radius: 0.5em;">
+         <children>
+            <Pane layoutY="351.0" prefHeight="149.0" prefWidth="320.0" style="-fx-background-radius: 0.5em;" styleClass="linear-grad-to-bottom" stylesheets="@style.css">
+               <children>
+                  <FontAwesomeIcon id="play" fill="#f10f0f" iconName="PLAY" layoutX="148.0" layoutY="84.0" onMouseClicked="#play" opacity="0.9" size="30" stroke="TRANSPARENT">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon id="prev" fill="#f10f0f" iconName="CHEVRON_LEFT" layoutX="80.0" layoutY="84.0" onMouseClicked="#prev" size="30">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon id="next" fill="#f10f0f" iconName="CHEVRON_RIGHT" layoutX="215.0" layoutY="84.0" onMouseClicked="#next" size="30">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon id="repeat" fill="#fcf9f9" iconName="RETWEET" layoutX="26.0" layoutY="80.0" onMouseClicked="#repeat" size="20" text="">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></FontAwesomeIcon>
+                  <FontAwesomeIcon id="shuffle" fill="WHITE" iconName="RANDOM" layoutX="277.0" layoutY="81.0" onMouseClicked="#shuffle" size="20" text="">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></FontAwesomeIcon>
+               </children>
+            </Pane>
+            <Pane prefHeight="48.0" prefWidth="320.0" style="-fx-background-radius: 0.5em;" styleClass="linear-grad-to-top" stylesheets="@style.css">
+               <children>
+                  <FontAwesomeIcon id="menu_button" fill="#fffefe" iconName="REORDER" layoutX="14.0" layoutY="31.0" onMouseClicked="#open_or_close_sidebar" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect></FontAwesomeIcon>
+                  <FontAwesomeIcon id="close" fill="#f8f1f1" iconName="TIMES_CIRCLE" layoutX="288.0" layoutY="31.0" onMouseClicked="#close_app" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect></FontAwesomeIcon>
+                  <Button fx:id="minimizebutton" layoutX="248.0" layoutY="13.0" mnemonicParsing="false" onAction="#handlebuttonaction" prefHeight="14.0" prefWidth="17.0" textFill="WHITE">
+                     <font>
+                        <Font size="2.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </Pane>
+            <JFXProgressBar fx:id="progressBar" layoutX="1.0" layoutY="357.0" prefWidth="320.0" progress="0.0">
+               <effect>
+                  <DropShadow />
+               </effect></JFXProgressBar>
+            <Label fx:id="album" alignment="CENTER" layoutX="8.0" layoutY="285.0" prefHeight="30.0" prefWidth="279.0" textFill="#f5f4f4" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="title" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="221.0" prefHeight="39.0" prefWidth="272.0" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+               <effect>
+                  <Lighting diffuseConstant="0.88" specularConstant="1.46" specularExponent="18.6">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <Label fx:id="artist" alignment="CENTER" layoutX="12.0" layoutY="260.0" prefHeight="30.0" prefWidth="279.0" textFill="#f5f4f4" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="year" alignment="CENTER" layoutX="83.0" layoutY="320.0" prefHeight="18.0" prefWidth="150.0" textFill="#f5f4f4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="84.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@lecteur-de-musique-92113-1.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ProgressBar fx:id="volumeBar" layoutX="254.0" layoutY="268.0" prefHeight="18.0" prefWidth="95.0" progress="0.0" rotate="-90.0">
+               <effect>
+                  <DropShadow />
+               </effect></ProgressBar>
+         </children>
+      </Pane>
+      <Pane fx:id="sidebar" layoutX="329.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="455.0" style="-fx-background-radius: 0.5em; -fx-background-color: #0f5873;" styleClass="linear-grad-to-bottom" stylesheets="@style.css">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Pane prefHeight="48.0" prefWidth="455.0" style="-fx-background-radius: 0.5em;" styleClass="linear-grad-to-top" stylesheets="@style.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="157.0" layoutY="8.0" prefHeight="32.0" prefWidth="142.0" text="ALL SONGS" textFill="#f10f0f">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <FontAwesomeIcon id="close2" fill="#f5f2f2" iconName="TIMES_CIRCLE" layoutX="423.0" layoutY="31.0" onMouseClicked="#close_sidebar" size="20">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect></FontAwesomeIcon>
+                  <FontAwesomeIcon id="add" fx:id="add_song" fill="#fffdfd" focusTraversable="true" iconName="EXTERNAL_LINK" layoutX="14.0" layoutY="31.0" onMouseClicked="#add_songs" size="20" text="">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow />
+                     </effect></FontAwesomeIcon>
+               </children>
+            </Pane>
+            <TableView fx:id="tableView" layoutX="51.0" layoutY="63.0" prefHeight="413.0" prefWidth="355.0" style="-fx-background-color: #0f5873;">
+               <columns>
+                  <TableColumn prefWidth="95.0" text="Title" />
+                  <TableColumn prefWidth="86.0" text="Album" />
+                  <TableColumn minWidth="0.0" prefWidth="81.0" text="Artist" />
+                  <TableColumn minWidth="0.0" prefWidth="92.0" text="Year" />
+               </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
